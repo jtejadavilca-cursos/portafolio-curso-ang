@@ -5,15 +5,39 @@ import { Http } from '@angular/http';
 export class InfoWebService {
 
   info:any = {};
-  estaCargada:boolean = false;
+  colaboradores:any = {};
+  infoWebCargada:boolean = false;
+  infoColaboradoresCargada:boolean = false;
 
   constructor(public http:Http) {
+    this.cargarInfoWeb();
+    this.cargarColaboradores();
+  }
+
+  public cargarInfoWeb(){
     this.http.get("assets/data/info.pagina.json")
               .subscribe( data => {
-                console.log(data.json());
-                this.estaCargada = true;
+                this.infoWebCargada = true;
                 this.info = data.json();
+                console.log(this.info);
               } );
   }
 
+  //https://curso-html-angular4.firebaseio.com/equipo.json
+  public cargarColaboradores(){
+
+    this.http.get("https://curso-html-angular4.firebaseio.com/equipo.json")
+              .subscribe( data => {
+                this.infoColaboradoresCargada = true;
+                this.colaboradores = data.json();
+                console.log(this.colaboradores);
+              } );
+
+  }
+
 }
+
+
+/*
+curso-html-angular4
+*/

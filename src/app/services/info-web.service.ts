@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 export class InfoWebService {
 
   info:any = {};
-  colaboradores:any = {};
+  colaboradores:any[] = [];
   infoWebCargada:boolean = false;
   infoColaboradoresCargada:boolean = false;
 

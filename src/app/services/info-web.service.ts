@@ -19,7 +19,6 @@ export class InfoWebService {
               .subscribe( data => {
                 this.infoWebCargada = true;
                 this.info = data.json();
-                console.log(this.info);
               } );
   }
 
@@ -30,7 +29,6 @@ export class InfoWebService {
               .subscribe( data => {
                 this.infoColaboradoresCargada = true;
                 this.colaboradores = data.json();
-                console.log(this.colaboradores);
               } );
 
   }

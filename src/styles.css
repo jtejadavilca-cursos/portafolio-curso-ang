@@ -1,3 +1,9 @@
+/*SVG LOADING*/
+svg path,
+svg rect{
+  fill: black;
+}
+
 /* Animate CSS */
 .animated {
   animation-duration: 0.8s;

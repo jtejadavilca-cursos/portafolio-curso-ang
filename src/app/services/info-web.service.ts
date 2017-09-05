@@ -6,7 +6,7 @@ export class InfoWebService {
 
   info:any = {};
   colaboradores:any[] = [];
-  infoWebCargada:boolean = false;
+  cargando:boolean = true;
   infoColaboradoresCargada:boolean = false;
 
   constructor(public http:Http) {
@@ -15,9 +15,10 @@ export class InfoWebService {
   }
 
   public cargarInfoWeb(){
+    this.cargando = true;
     this.http.get("assets/data/info.pagina.json")
               .subscribe( data => {
-                this.infoWebCargada = true;
+                this.cargando = false;
                 this.info = data.json();
               } );
   }

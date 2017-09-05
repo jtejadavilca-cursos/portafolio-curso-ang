@@ -4,18 +4,24 @@ import { Http } from '@angular/http';
 @Injectable()
 export class ProductosService {
   productos:any[] = [];
-  productosCargados:boolean = false;
+  cargando:boolean = true;
 
   constructor(private http:Http) {
     this.cargarProductos();
   }
 
   public cargarProductos(){
+    this.cargando = true;
+
     this.http.get('https://curso-html-angular4.firebaseio.com/productos_idx.json')
               .subscribe( res =>{
-                this.productos = res.json();
-                this.productosCargados = true;
                 console.log(this.productos);
+
+                // setTimeout(()=>{
+                  this.productos = res.json();
+                  this.cargando = false;
+                // }, 1);
+
               });
   }
 

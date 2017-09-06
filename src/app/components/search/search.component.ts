@@ -12,7 +12,7 @@ export class SearchComponent {
   productosFiltrados:any[] = [];
 
   constructor(private route: ActivatedRoute,
-    private _productosService:ProductosService) {
+    public _productosService:ProductosService) {
 
       route.params.subscribe(parametros => {
         this.termino = parametros['termino'];

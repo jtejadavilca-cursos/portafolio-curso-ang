@@ -1,0 +1,21 @@
+{
+  "equipo" : [ {
+    "frase" : "Camarón que se duerme, amanece más temprano",
+    "nombre" : "José Tejada",
+    "subtitulo" : "Gerente",
+    "twitter" : "@josetejadauch",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/curso-html-angular4.appspot.com/o/team-3.jpg?alt=media&token=c276ac24-a9e4-4a89-9df6-aa0fedaf8b53"
+  }, {
+    "frase" : "Estudiar es para brutos",
+    "nombre" : "Manuel Pajares",
+    "subtitulo" : "Programador",
+    "twitter" : "@mpajaresperu",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/curso-html-angular4.appspot.com/o/team-1.jpg?alt=media&token=8005b3a8-cbaa-4370-9f15-75c8920ec266"
+  }, {
+    "frase" : "No recuerdo ninguna buena frase, por ahora",
+    "nombre" : "Juana Inmemmoriam",
+    "subtitulo" : "Secretaria",
+    "twitter" : "@juanainmmemoriam",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/curso-html-angular4.appspot.com/o/team-2.jpg?alt=media&token=f68b7ab6-bc5b-4545-bf67-8fbbfc5e02e2"
+  } ]
+}

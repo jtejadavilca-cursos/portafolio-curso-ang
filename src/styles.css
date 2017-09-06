@@ -10,6 +10,13 @@ svg rect{
   animation-fill-mode: both;
 }
 
+/*Shadow title*/
+.blurry-text {
+   color: #000;;
+   text-shadow: 0 0 5px #fff/*rgba(0,0,0,0.5)*/;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;

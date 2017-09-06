@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductosService } from '../../services/productos.service';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styles: []
+  templateUrl: './search.component.html'
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
-  constructor() { }
+  termino:string = undefined;
+  productosFiltrados:any[] = [];
 
-  ngOnInit() {
+  constructor(private route: ActivatedRoute,
+    private _productosService:ProductosService) {
+
+      route.params.subscribe(parametros => {
+        this.termino = parametros['termino'];
+        _productosService.buscarProductos(this.termino);
+      });
   }
-
 }

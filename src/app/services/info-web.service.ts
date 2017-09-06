@@ -23,7 +23,6 @@ export class InfoWebService {
               } );
   }
 
-  //https://curso-html-angular4.firebaseio.com/equipo.json
   public cargarColaboradores(){
 
     this.http.get("https://curso-html-angular4.firebaseio.com/equipo.json")
@@ -35,8 +34,3 @@ export class InfoWebService {
   }
 
 }
-
-
-/*
-curso-html-angular4
-*/

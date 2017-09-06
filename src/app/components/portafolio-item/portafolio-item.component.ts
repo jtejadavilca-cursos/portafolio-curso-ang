@@ -14,11 +14,9 @@ export class PortafolioItemComponent {
     private _productosService:ProductosService){
 
     route.params.subscribe(parametros => {
-      console.log(parametros.id);
       _productosService.cargarItem(parametros['id']).subscribe(res => {
           this.item = res.json();
           this.item['cod'] = parametros['id'];
-          console.log(this.item);
         });
     });
 

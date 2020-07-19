@@ -5,10 +5,10 @@ import { InfoWebService } from '../../services/info-web.service';
   selector: 'app-footer',
   templateUrl: './footer.component.html'
 })
-export class FooterComponent{
-  anio:number = new Date().getFullYear();
+export class FooterComponent {
+  anio: number = new Date().getFullYear();
 
-  constructor(public _infoWebService:InfoWebService){
+  constructor(public _infoWebService: InfoWebService) {
 
   }
 

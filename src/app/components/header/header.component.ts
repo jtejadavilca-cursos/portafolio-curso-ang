@@ -7,12 +7,12 @@ import {Router} from '@angular/router';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  constructor( public _infoWebService:InfoWebService,
-               private router:Router){
+  constructor( public _infoWebService: InfoWebService,
+               private router: Router) {
 
   }
 
-  buscarProducto(termino:string){
+  buscarProducto(termino: string) {
     this.router.navigate(['buscar', termino]);
   }
 }

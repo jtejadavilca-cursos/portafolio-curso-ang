@@ -7,8 +7,8 @@ import { ProductosService } from './services/productos.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  constructor(private _infoWebService:InfoWebService,
-              private _productosService:ProductosService){
+  constructor(private _infoWebService: InfoWebService,
+              private _productosService: ProductosService) {
 
   }
 }

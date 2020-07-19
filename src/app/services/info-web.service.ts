@@ -1,34 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class InfoWebService {
 
-  info:any = {};
-  colaboradores:any[] = [];
-  cargando:boolean = true;
-  infoColaboradoresCargada:boolean = false;
+  info: any = {};
+  colaboradores: any[] = [];
+  cargando: boolean = true;
+  infoColaboradoresCargada: boolean = false;
 
-  constructor(public http:Http) {
+  constructor(public http: HttpClient) {
     this.cargarInfoWeb();
     this.cargarColaboradores();
   }
 
-  public cargarInfoWeb(){
+  public cargarInfoWeb() {
     this.cargando = true;
-    this.http.get("assets/data/info.pagina.json")
-              .subscribe( data => {
+    this.http.get('assets/data/info.pagina.json')
+              .subscribe( (data: any) => {
                 this.cargando = false;
                 this.info = data.json();
               } );
   }
 
-  public cargarColaboradores(){
+  public cargarColaboradores() {
 
-    this.http.get("https://curso-html-angular4.firebaseio.com/equipo.json")
-              .subscribe( data => {
+    this.http.get('https://curso-html-angular4.firebaseio.com/equipo.json')
+              .subscribe( (data: any[]) => {
                 this.infoColaboradoresCargada = true;
-                this.colaboradores = data.json();
+                this.colaboradores = data;
               } );
 
   }

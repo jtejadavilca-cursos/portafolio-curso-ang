@@ -5,7 +5,7 @@ import {InfoWebService} from '../../services/info-web.service';
   templateUrl: './about.component.html'
 })
 export class AboutComponent {
-  constructor(public _infoWebService:InfoWebService){
+  constructor(public _infoWebService: InfoWebService) {
 
   }
 }

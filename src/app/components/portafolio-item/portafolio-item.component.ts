@@ -8,14 +8,14 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class PortafolioItemComponent {
 
-  item:any = undefined;
+  item: any = undefined;
 
   constructor(private route: ActivatedRoute,
-    private _productosService:ProductosService){
+    private _productosService: ProductosService) {
 
     route.params.subscribe(parametros => {
       _productosService.cargarItem(parametros['id']).subscribe(res => {
-          this.item = res.json();
+          this.item = res;
           this.item['cod'] = parametros['id'];
         });
     });

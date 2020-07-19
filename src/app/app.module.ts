@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from '@angular/common/http';
 
-//Rutas
+// Rutas
 import {APP_ROUTING} from './app.routes';
 
-//Servicios
-import { InfoWebService } from "./services/info-web.service";
-import { ProductosService } from "./services/productos.service";
+// Servicios
+import { InfoWebService } from './services/info-web.service';
+import { ProductosService } from './services/productos.service';
 
-//Componentes
+// Componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -30,7 +30,7 @@ import { SearchComponent } from './components/search/search.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     APP_ROUTING
   ],
   providers: [

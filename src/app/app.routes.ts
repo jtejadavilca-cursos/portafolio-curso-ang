@@ -5,7 +5,7 @@ import {
   HomeComponent,
   PortafolioItemComponent,
   SearchComponent
-} from "./components/index.paginas";
+} from './components/index.paginas';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,4 +15,4 @@ const APP_ROUTES: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, {useHash:true});
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, {useHash: true});

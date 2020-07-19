@@ -8,11 +8,11 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class SearchComponent {
 
-  termino:string = undefined;
-  productosFiltrados:any[] = [];
+  termino: string = undefined;
+  productosFiltrados: any[] = [];
 
   constructor(private route: ActivatedRoute,
-    public _productosService:ProductosService) {
+    public _productosService: ProductosService) {
 
       route.params.subscribe(parametros => {
         this.termino = parametros['termino'];

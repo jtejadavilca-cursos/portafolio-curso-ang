@@ -33,10 +33,6 @@ import { SearchComponent } from './components/search/search.component';
     HttpClientModule,
     APP_ROUTING
   ],
-  providers: [
-    InfoWebService,
-    ProductosService
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

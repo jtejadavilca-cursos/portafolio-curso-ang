@@ -19,7 +19,7 @@ export class InfoWebService {
     this.http.get('assets/data/info.pagina.json')
               .subscribe( (data: any) => {
                 this.cargando = false;
-                this.info = data.json();
+                this.info = data;
               } );
   }
 
